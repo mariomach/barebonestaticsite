@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!--  Headings  -->
     <section class="section">
         <div class="container">
             <h1 class="title">
@@ -21,22 +22,57 @@
         </div>
     </section>
 
-        <body>
-            <section class="section">
-                <div class="container">
-                    <h1>Here are the courses offered:</h1>
-                    <div class="container is-fluid">
-                        <nav class="level">
-                            <div class="level-item">
-                                {% for course in courses %}
-                                <div class="column">{{ course }}</div>
-                                {% endfor %}
-                            </div>
-                        </nav>
+<!-- New List of Course Offered -->
+    <section class="section">
+        <div class="container">
+            <h1>Here are the new courses offered:</h1>
+            <div class="container is-fluid">
+                <nav class="level">
+                    <div class="level-item">
+                        {% for course in newcourses %}
+                        <div class="column">{{ course }}</div>
+                        {% endfor %}
                     </div>
-                </div>
-            </section>
-        </body>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+<!-- Old List of Course Offered -->
+    <section class="section">
+        <div class="container">
+            <h1>Here are the old courses offered:</h1>
+            <div class="container is-fluid">
+                <nav class="level">
+                    <div class="level-item">
+                        {% for course in courses %}
+                        <div class="column">{{ course }}</div>
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+<!-- Student List  -->
+    <section class="section">
+        <div class="container">
+            <h1>Classlist:</h1>
+            <div class="container is-fluid">
+                <nav class="level">
+                    <div class="level-item">
+                        {% for student in students %}
+                        <div class="column">{{ student.first}} {{ student.last  }}</div>
+                        {% endfor %}
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- <form method="get" action="/student">
+        <button type="submit"> Back to Flights</button>
+    </form> -->
 
 </body>
 
