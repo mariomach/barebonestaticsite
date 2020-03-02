@@ -63,6 +63,9 @@
                     <div class="level-item">
                         {% for student in students %}
                         <div class="column">{{ student.first}} {{ student.last  }}</div>
+                        <div class="column">{{ student.id}} </div>
+                        <div class="column"><a href="{{ student.id }}">Go to student page</a></div>
+                        <div class="column"><a href="{% url 'studentpages' student.id %}">Go to student page</a></div>
                         {% endfor %}
                     </div>
                 </nav>
@@ -70,10 +73,10 @@
         </div>
     </section>
 
-    <!-- <form method="get" action="/student">
-        <button type="submit"> Back to Flights</button>
-    </form> -->
-
+   <!-- Get the student page  -->
+    <li><a href="/student">Go to student page</a></li>
+    <li><a href="/student">{{ students.id }}</a></li>
+    <!-- <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li> -->
 </body>
 
 </html>
